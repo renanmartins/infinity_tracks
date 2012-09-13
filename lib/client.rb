@@ -22,4 +22,8 @@ class Client
     system("curl #{api_header} http://8tracks.com/sets/#{play_token}/play.json?mix_id=#{mix_id}")    
   end
   
+  def next play_token, mix_id
+    system("curl #{api_header} http://8tracks.com/sets/#{play_token}/next.json?mix_id=#{mix_id}")    
+  end
+  
 end

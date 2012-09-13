@@ -27,4 +27,11 @@ describe 'client' do
     @client.play play_token, mix_id
   end
   
+  it "gets a next response for a given mix id and play token" do
+    play_token = "381093365"
+    mix_id = "1002941"
+    @client.should_receive("system").with("curl #{@client.api_header} http://8tracks.com/sets/#{play_token}/next.json?mix_id=#{mix_id}")
+    @client.next play_token, mix_id
+  end
+  
 end
