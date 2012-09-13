@@ -8,4 +8,14 @@ class Song
     @url = url
   end
   
+  def save 
+    system("curl #{url} >> #{performer}_#{name}.#{extension}")
+  end
+  
+  private
+  
+  def extension
+    @url.split(".").last
+  end
+  
 end
