@@ -11,7 +11,7 @@ describe 'client' do
   end
   
   it 'should generate play token from api' do
-    @client.should_receive("system").with("ls")
+    @client.should_receive("system").with("curl #{@client.api_header} http://8tracks.com/sets/new.xml")
     @client.generate_play_token
   end
   
