@@ -10,7 +10,7 @@ class Client
     "--header \"X-Api-Key: #{@api_key}\""
   end
   
-  def generate_play_token
+  def get_play_token
     system("curl #{api_header} http://8tracks.com/sets/new.xml")
   end
   
