@@ -16,4 +16,10 @@ describe "response_parser" do
     @response_parser.mix_id(html).should eql "915988"
   end
   
+  it "parses the song url out of a json" do
+    play_json = File.open(File.dirname(__FILE__) + "/resources/play.json").read
+    expected_song_url = "http://cft.8tracks.com/tf/035/117/082/mvUG6M.48k.v3.m4a"
+    @response_parser.song_url(play_json).should eql expected_song_url
+  end
+
 end

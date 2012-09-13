@@ -10,4 +10,8 @@ class ResponseParser
     html.match(/mix_id="([\d]+)"/)[1]
   end
   
+  def song_url json
+    JSON.parse(json)["set"]["track"]["url"]
+  end
+  
 end

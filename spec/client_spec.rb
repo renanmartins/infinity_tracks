@@ -6,18 +6,25 @@ describe 'client' do
     @client = Client.new
   end
   
-  it 'should generate the api header' do
+  it 'generates the api header' do
     @client.api_header.should eql '--header "X-Api-Key: 75b354efe5198149e4a244130148bcc235efdc47"'
   end
   
-  it 'should get play token from api' do
-    @client.should_receive("system").with("curl #{@client.api_header} http://8tracks.com/sets/new.xml")
+  it 'gets play token' do
+    @client.should_receive("system").with("curl #{@client.api_header} http://8tracks.com/sets/new.json")
     @client.play_token
   end
   
-  it "should get a playlist from url" do
+  it "gets playlist from url" do
     @client.should_receive("system").with("curl http://8tracks.com/sebastienvachon89/pop-diva-s-remixed")
     @client.playlist "http://8tracks.com/sebastienvachon89/pop-diva-s-remixed"
+  end
+  
+  it "gets play response for a given mix id and play token" do
+    play_token = "381093365"
+    mix_id = "1002941"
+    @client.should_receive("system").with("curl #{@client.api_header} http://8tracks.com/sets/#{play_token}/play.json?mix_id=#{mix_id}")
+    @client.play play_token, mix_id
   end
   
 end
