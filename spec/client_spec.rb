@@ -15,7 +15,7 @@ describe 'client' do
     @client.play_token
   end
   
-  it "should get a playlist from api" do
+  it "should get a playlist from url" do
     @client.should_receive("system").with("curl http://8tracks.com/sebastienvachon89/pop-diva-s-remixed")
     @client.playlist "http://8tracks.com/sebastienvachon89/pop-diva-s-remixed"
   end
