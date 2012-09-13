@@ -6,8 +6,13 @@ describe 'client' do
     @client = Client.new
   end
   
-  it 'should have the correct API key' do
-    @client.api_key.should eql "75b354efe5198149e4a244130148bcc235efdc47"
+  it 'should generate the api header' do
+    @client.api_header.should eql '--header "X-Api-Key: 75b354efe5198149e4a244130148bcc235efdc47"'
+  end
+  
+  it 'should generate play token from api' do
+    @client.should_receive("system").with("ls")
+    @client.generate_play_token
   end
   
 end

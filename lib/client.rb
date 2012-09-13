@@ -1,9 +1,15 @@
 class Client
   
-  attr_reader :api_key
-  
   def initialize
     @api_key = "75b354efe5198149e4a244130148bcc235efdc47"
+  end
+  
+  def api_header
+    "--header \"X-Api-Key: #{@api_key}\""
+  end
+  
+  def generate_play_token
+    system("curl")
   end
   
 end
