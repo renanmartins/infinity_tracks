@@ -12,7 +12,12 @@ describe 'client' do
   
   it 'should get play token from api' do
     @client.should_receive("system").with("curl #{@client.api_header} http://8tracks.com/sets/new.xml")
-    @client.get_play_token
+    @client.play_token
+  end
+  
+  it "should get a playlist from api" do
+    @client.should_receive("system").with("curl http://8tracks.com/sebastienvachon89/pop-diva-s-remixed")
+    @client.playlist "http://8tracks.com/sebastienvachon89/pop-diva-s-remixed"
   end
   
 end

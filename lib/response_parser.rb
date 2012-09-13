@@ -7,7 +7,7 @@ class ResponseParser
   end
   
   def play_token
-    @play_token ||= JSON.parse(@client.get_play_token)["play_token"]
+    @play_token ||= JSON.parse(@client.play_token)["play_token"]
   end
   
 end
