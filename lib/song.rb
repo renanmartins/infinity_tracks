@@ -9,7 +9,7 @@ class Song
   end
   
   def save 
-    system("curl #{url} >> '#{performer}_#{name}.#{extension}'")
+    system("curl #{url} >> \"#{performer}_#{name}.#{extension}\"")
   end
   
   private

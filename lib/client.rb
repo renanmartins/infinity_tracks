@@ -3,7 +3,7 @@ class Client
   attr_reader :play_token
   
   def initialize
-    @api_key = "75b354efe5198149e4a244130148bcc235efdc47"
+    @api_key = "e098e014125339698e741cb25feebd9f54b1a89b"
   end
   
   def api_header

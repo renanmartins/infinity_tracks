@@ -9,8 +9,12 @@ class Downloader
   def run
     play_token = @parser.play_token(@client.play_token)
     mix_id = @parser.mix_id(@client.playlist @url)
-    song = @parser.song(@client.play play_token, mix_id)
-    song.save
+    @parser.song(@client.play play_token, mix_id).save
+    while true
+       
+       @parser.song(@client.next play_token, mix_id).save
+      
+    end
   end
   
 end
