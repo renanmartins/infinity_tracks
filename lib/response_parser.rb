@@ -1,17 +1,12 @@
 require "JSON"  
 
 class ResponseParser
-  
-  def initialize client
-    @client = client
+    
+  def play_token json 
+    JSON.parse(json)["play_token"]
   end
   
-  def play_token
-    @play_token ||= JSON.parse(@client.play_token)["play_token"]
-  end
-  
-  def mix_id url
-    html = @client.playlist url
+  def mix_id html
     html.match(/mix_id="([\d]+)"/)[1]
   end
   
