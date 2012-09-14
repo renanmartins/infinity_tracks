@@ -12,6 +12,10 @@ class Song
     system("curl #{url} >> \"#{performer}_#{name}.#{extension}\"")
   end
   
+  def info
+    {:name => @name, :performer => @performer, :url => @url}
+  end
+  
   private
   
   def extension

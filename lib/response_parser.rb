@@ -11,7 +11,6 @@ class ResponseParser
   end
   
   def song json
-    puts "----------SONG----------\n#{json}\n\n\n"
     track = JSON.parse(json)["set"]["track"]
     Song.new track["name"], track["performer"], track["url"]
   end

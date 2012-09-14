@@ -7,7 +7,7 @@ describe 'client' do
   end
   
   it 'generates the api header' do
-    @client.api_header.should eql '--header "X-Api-Key: 75b354efe5198149e4a244130148bcc235efdc47"'
+    @client.api_header.should eql '--header "X-Api-Key: e098e014125339698e741cb25feebd9f54b1a89b"'
   end
   
   it 'gets play token' do
