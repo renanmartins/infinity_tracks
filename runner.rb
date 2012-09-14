@@ -1,4 +1,4 @@
 require 'require_all'
 require_all 'lib'
 
-Downloader.new(ARGV[0]).run
+SongsProvider.new(Client.new, ResponseParser.new).songs_for_playlist(ARGV[0]).each {|song| song.save}
