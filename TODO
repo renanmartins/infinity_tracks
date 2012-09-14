@@ -1,0 +1,5 @@
+ => Save songs into mix-named folder
+ => Save song meta-data (whatever way, even the json file would be fine for now)
+ => Save the MIX meta-data
+ => Stop properly when mix is finished
+ => Download similar mixes (saves the selected one plus X similar ones =)
