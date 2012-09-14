@@ -16,21 +16,8 @@ post '/form' do
 end
 
 def playlist_songs
-  url = params[:url]
-  client = Client.new
-  parser = ResponseParser.new
-  
-  play_token = parser.play_token(client.play_token)
-  mix_id = parser.mix_id(client.playlist url)
-  
-  begin
-    songs = []
-    while true
-      songs << parser.song(client.next play_token, mix_id).info
-    end
-  rescue
-    puts "error"
-  end
+  songs = []
+  SongsProvider.new(Client.new, ResponseParser.new).songs_for_playlist(params[:url]).each {|song| songs << song.info}
   
   content_type :json
   songs.to_json
