@@ -3,7 +3,19 @@ require 'json'
 require 'require_all'
 require_all 'lib'
 
+get '/form' do  
+  erb :form  
+end
+
 get '/' do
+  playlist_songs
+end
+
+post '/form' do  
+  playlist_songs
+end
+
+def playlist_songs
   url = params[:url]
   client = Client.new
   parser = ResponseParser.new
