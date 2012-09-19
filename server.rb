@@ -17,8 +17,8 @@ end
 
 def playlist_songs
   songs = []
-  SongsProvider.new(Client.new, ResponseParser.new).songs_for_playlist(params[:url]).each {|song| songs << song.info}
+  MixProvider.new(Client.new, ResponseParser.new).mix(params[:url]).songs.each {|song| songs << song.info}
   
   content_type :json
-  songs.to_json
+  JSON.pretty_generate(songs)
 end

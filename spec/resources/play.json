@@ -2,7 +2,7 @@
   "set": {
     "at_beginning": true,
     "at_end": false,
-    "at_last_track": false,
+    "at_last_track": true,
     "skip_allowed": true,
     "track": {
       "id": 9378697,

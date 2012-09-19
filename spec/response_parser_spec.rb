@@ -28,6 +28,7 @@ describe "response_parser" do
     song.url.should eql expected_song_url
     song.name.should eql expected_song_name
     song.performer.should eql expected_song_performer
+    song.is_last_on_set?.should be_true
   end
 
 end

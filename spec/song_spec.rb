@@ -18,4 +18,13 @@ describe "song" do
     @song.info.should eql expected_info
   end
   
+  it "is not the last song by default" do
+    @song.is_last_on_set?.should be_false
+  end
+  
+  it "knows it's the last song on a set" do
+    @song.is_last_on_set
+    @song.is_last_on_set?.should be_true
+  end
+  
 end
