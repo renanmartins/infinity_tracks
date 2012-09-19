@@ -4,6 +4,7 @@ describe "response_parser" do
 
   before :each do
     @response_parser = ResponseParser.new
+    @html = File.open(File.dirname(__FILE__) + "/resources/playlist.html").read
   end
 
   it "parses the play token out of a json" do
@@ -12,10 +13,13 @@ describe "response_parser" do
   end
   
   it "parses the mix id out of a html" do
-    html = File.open(File.dirname(__FILE__) + "/resources/playlist.html").read
-    @response_parser.mix_id(html).should eql "915988"
+    @response_parser.mix_id(@html).should eql "915988"
   end
   
+  it "parses the mix name from an html" do
+    @response_parser.mix_name(@html).should eql "Pop diva's remixed."    
+  end
+    
   it "parses the song out of a json" do
     play_json = File.open(File.dirname(__FILE__) + "/resources/play.json").read
     
@@ -29,6 +33,5 @@ describe "response_parser" do
     song.name.should eql expected_song_name
     song.performer.should eql expected_song_performer
     song.is_last_on_set?.should be_true
-  end
-
+  end  
 end

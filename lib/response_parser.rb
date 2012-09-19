@@ -1,4 +1,5 @@
 require "JSON"  
+require "htmlentities"
 
 class ResponseParser
     
@@ -8,6 +9,10 @@ class ResponseParser
   
   def mix_id html
     html.match(/mix_id="([\d]+)"/)[1]
+  end
+  
+  def mix_name html
+    HTMLEntities.new.decode(html.match(/<meta content="(.*)" property="og:title" \/>/)[1])
   end
   
   def song json
