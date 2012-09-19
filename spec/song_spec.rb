@@ -13,6 +13,14 @@ describe "song" do
     `rm -r #{directory}`
   end
   
+  it "handles special characters on its name" do
+    directory = "test_songs"
+    song = Song.new "Gangnam !'\\Style", "Ps#y", "moizesnaoconsegue.com/music.mp3"
+    song.should_receive("system").with("curl #{song.url} >> \"#{directory}/Psy_Gangnam Style.mp3\"")
+    song.save directory
+    `rm -r #{directory}`
+  end
+  
   it "returns its information" do
     expected_info = {:name => @song.name, :performer => @song.performer, :url => @song.url}
     @song.info.should eql expected_info

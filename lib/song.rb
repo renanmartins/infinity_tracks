@@ -11,7 +11,7 @@ class Song
   
   def save directory
     Dir.mkdir(Dir.pwd + "/#{directory}/") unless Dir.exists?(Dir.pwd + "/#{directory}/")
-    system("curl #{url} >> \"#{directory}/#{performer}_#{name}.#{extension}\"")
+    system("curl #{url} >> \"#{directory}/#{sanitize performer}_#{sanitize name}.#{extension}\"")
   end
   
   def info
@@ -30,6 +30,10 @@ class Song
   
   def extension
     @url.split(".").last
+  end
+  
+  def sanitize string
+    string.gsub(/[^a-zA-Z0-9 ]+/, "")
   end
   
 end
