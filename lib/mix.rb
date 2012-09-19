@@ -1,7 +1,8 @@
 class Mix
-  attr_reader :songs
+  attr_reader :songs, :name
 
-  def initialize
+  def initialize name
+    @name = name
     @songs = []
   end
 
@@ -9,8 +10,8 @@ class Mix
     @songs << song
   end
   
-  def save directory
-    @songs.each {|song| song.save directory}
+  def save
+    @songs.each {|song| song.save @name}
   end
   
 end

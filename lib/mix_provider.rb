@@ -7,9 +7,10 @@ class MixProvider
   
   def mix url
     play_token = @parser.play_token(@client.play_token)
-    mix_id = @parser.mix_id(@client.playlist url)
+    playlist = @client.playlist url
+    mix_id = @parser.mix_id(playlist)
     
-    mix = Mix.new
+    mix = Mix.new @parser.mix_name(playlist)
     
     while true
       song = @parser.song(@client.next play_token, mix_id)
