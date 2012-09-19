@@ -1,4 +1,3 @@
- => Save songs into mix-named folder
  => Save song meta-data (whatever way, even the json file would be fine for now) - search for TagLib
  => Save the MIX meta-data
  => Download similar mixes (saves the selected one plus X similar ones =))

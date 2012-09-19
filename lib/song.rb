@@ -9,7 +9,8 @@ class Song
     @last_on_set = false
   end
   
-  def save directory
+  def save mix_name
+    directory = sanitize mix_name
     Dir.mkdir(Dir.pwd + "/#{directory}/") unless Dir.exists?(Dir.pwd + "/#{directory}/")
     system("curl #{url} >> \"#{directory}/#{sanitize performer}_#{sanitize name}.#{extension}\"")
   end
@@ -33,7 +34,7 @@ class Song
   end
   
   def sanitize string
-    string.gsub(/[^a-zA-Z0-9 ]+/, "")
+    string.gsub(/[^a-zA-Z0-9_ ]+/, "")
   end
   
 end

@@ -14,11 +14,11 @@ describe "song" do
   end
   
   it "handles special characters on its name" do
-    directory = "test_songs"
+    mix_name = "tes#t@_s!on'g`s"
     song = Song.new "Gangnam !'\\Style", "Ps#y", "moizesnaoconsegue.com/music.mp3"
-    song.should_receive("system").with("curl #{song.url} >> \"#{directory}/Psy_Gangnam Style.mp3\"")
-    song.save directory
-    `rm -r #{directory}`
+    song.should_receive("system").with("curl #{song.url} >> \"test_songs/Psy_Gangnam Style.mp3\"")
+    song.save mix_name
+    `rm -r test_songs/`
   end
   
   it "returns its information" do
