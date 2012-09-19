@@ -8,8 +8,9 @@ class Song
     @url = url
   end
   
-  def save 
-    system("curl #{url} >> \"#{performer}_#{name}.#{extension}\"")
+  def save directory
+    Dir.mkdir(Dir.pwd + "/#{directory}/") unless Dir.exists?(Dir.pwd + "/#{directory}/")
+    system("curl #{url} >> \"#{directory}/#{performer}_#{name}.#{extension}\"")
   end
   
   def info

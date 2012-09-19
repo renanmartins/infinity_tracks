@@ -1,4 +1,4 @@
 require 'require_all'
 require_all 'lib'
 
-SongsProvider.new(Client.new, ResponseParser.new).songs_for_playlist(ARGV[0]).each {|song| song.save}
+MixProvider.new(Client.new, ResponseParser.new).mix(ARGV[0]).save ARGV[1]
