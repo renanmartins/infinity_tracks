@@ -1,7 +1,11 @@
 source "http://rubygems.org"
 
-gem 'rspec'
 gem 'require_all'
 gem 'sinatra'
-gem 'guard-rspec'
-gem 'rb-fsevent'
+
+group :development, :test do
+	gem 'guard-rspec'
+	gem 'rb-fsevent'
+	gem	'terminal-notifier-guard'
+	gem 'rspec'
+end

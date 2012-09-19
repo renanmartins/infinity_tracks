@@ -33,5 +33,5 @@ describe 'client' do
     @client.should_receive(:`).with("curl #{@client.api_header} http://8tracks.com/sets/#{play_token}/next.json?mix_id=#{mix_id}")
     @client.next play_token, mix_id
   end
-  
+
 end
