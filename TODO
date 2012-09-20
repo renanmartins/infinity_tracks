@@ -2,8 +2,8 @@
  => Save the MIX meta-data
  => write a bookmarklet that opens a page with a list of songs and urls for the playlist the user is viewing (THIS IS GONNA BE AWESOME)
 
- => it's currently not working for songs hosted in soundcloud. The songs are provided through a service. We need to figure this out (lots of playlists are there). One example is: 8tracks.com/dopestephan/party-mashup-2 , and a service call would be: http://api.soundcloud.com/tracks/34418448/stream?client_id=3904229f42df3999df223f6ebf39a8fe
-mix do tc: http://8tracks.com/sebastienvachon89/pop-diva-s-remixed
+soundcloud: http://api.soundcloud.com/tracks/34418448/stream?client_id=3904229f42df3999df223f6ebf39a8fe
+set: http://8tracks.com/sebastienvachon89/pop-diva-s-remixed
 
  => create playlist file
  => Create logs for progress, hide the curl output
