@@ -20,6 +20,7 @@ describe "mix" do
     directory_name = @mix.name
     @first_song.should_receive(:save).with(directory_name)
     @second_song.should_receive(:save).with(directory_name)
+    @mix.should_receive(:`).with("curl #{@mix.cover_url} >> #{directory_name}/#{@mix_name}.jpg")
     
     @mix.save
     `rm -rf #{directory_name}`

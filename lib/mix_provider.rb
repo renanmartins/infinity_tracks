@@ -12,6 +12,7 @@ class MixProvider
   
     mix = Mix.new @parser.mix_name(playlist)
     mix.similar = @parser.next_mix_url(@client.similar_mix play_token, mix_id)
+    mix.cover_url = @parser.mix_cover_url(playlist)
     
     while true
       song = @parser.song(@client.next play_token, mix_id)

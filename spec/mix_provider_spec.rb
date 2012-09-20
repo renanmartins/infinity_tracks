@@ -16,6 +16,7 @@ describe "mix provider" do
     playlist_from_client = "playlist_from_client"
     mix_id_from_parser = "mix_id_from_parser"
     mix_name_from_parser = "mix_name_from_parser"
+    mix_cover_url_from_parser = "mix_cover_url_from_parser"
     similar_mix_from_client = "similar_mix_from_client"
     similar_mix_url_from_parser = "similar_mix_url_from_parser"
     song_from_client = "song_from_client"
@@ -29,6 +30,7 @@ describe "mix provider" do
     @parser.should_receive(:mix_name).with(playlist_from_client).and_return(mix_name_from_parser)
     @client.should_receive(:similar_mix).with(token_from_parser, mix_id_from_parser).and_return(similar_mix_from_client)
     @parser.should_receive(:next_mix_url).with(similar_mix_from_client).and_return(similar_mix_url_from_parser)
+    @parser.should_receive(:mix_cover_url).with(playlist_from_client).and_return(mix_cover_url_from_parser)
     
     @client.should_receive(:next).exactly(2).with(token_from_parser, mix_id_from_parser).and_return(song_from_client)
     @parser.should_receive(:song).with(song_from_client).and_return(a_song, last_song)
@@ -40,6 +42,7 @@ describe "mix provider" do
     mix.songs.last.should eql last_song
     mix.name.should eql mix_name_from_parser
     mix.similar.should eql similar_mix_url_from_parser
+    mix.cover_url.should eql mix_cover_url_from_parser
   end
   
 end

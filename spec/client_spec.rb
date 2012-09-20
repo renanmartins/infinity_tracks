@@ -20,13 +20,6 @@ describe 'client' do
     @client.playlist "http://8tracks.com/sebastienvachon89/pop-diva-s-remixed"
   end
   
-  it "gets play response for a given mix id and play token" do
-    play_token = "381093365"
-    mix_id = "1002941"
-    @client.should_receive(:`).with("curl #{@client.api_header} http://8tracks.com/sets/#{play_token}/play.json?mix_id=#{mix_id}")
-    @client.play play_token, mix_id
-  end
-  
   it "gets a next response for a given mix id and play token" do
     play_token = "381093365"
     mix_id = "1002941"

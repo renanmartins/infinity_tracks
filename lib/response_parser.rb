@@ -14,6 +14,10 @@ class ResponseParser
   def mix_name html
     HTMLEntities.new.decode(html.match(/<meta content="(.*)" property="og:title" \/>/)[1])
   end
+
+  def mix_cover_url html
+    HTMLEntities.new.decode(html.match(/<meta content="(.*)" property="og:image" \/>/)[1])
+  end
   
   def song json
     set = JSON.parse(json)["set"]

@@ -1,6 +1,6 @@
 class Mix
   attr_reader :songs, :name
-  attr_accessor :similar
+  attr_accessor :similar, :cover_url
 
   def initialize name
     @name = name
@@ -34,6 +34,8 @@ class Mix
     playlist_file = File.open("#{directory_full_path}/#{directory}.m3u", "w+")
     playlist.each {|song_name| playlist_file.puts(song_name)} 
     playlist_file.close
+
+    `curl #{@cover_url} >> #{directory}/#{name}.jpg`
   end
   
 end
