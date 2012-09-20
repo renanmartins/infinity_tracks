@@ -1,4 +1,4 @@
-require "JSON"  
+require "json"  
 require "htmlentities"
 
 class ResponseParser
