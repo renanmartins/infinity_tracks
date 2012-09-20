@@ -10,15 +10,13 @@ describe "song" do
     directory = "test_songs"
     @song.should_receive("system").with("wget -O \"#{directory}/#{@song.performer}_#{@song.name}.mp3\" #{@song.url}")
     @song.save directory
-    `rm -r #{directory}`
   end
   
   it "handles special characters on its name" do
-    mix_name = "tes#t@_s!on'g`s"
+    directory = "test_songs"
     song = Song.new "Gangnam !'\\Style", "Ps#y", "moizesnaoconsegue.com/music.mp3"
-    song.should_receive("system").with("wget -O \"test_songs/Psy_Gangnam Style.mp3\" #{song.url}")
-    song.save mix_name
-    `rm -r test_songs/`
+    song.should_receive("system").with("wget -O \"#{directory}/Psy_Gangnam Style.mp3\" #{song.url}")
+    song.save directory
   end
   
   it "returns its information" do
@@ -27,12 +25,12 @@ describe "song" do
   end
   
   it "is not the last song by default" do
-    @song.is_last_on_set?.should be_false
+    @song.last_on_set?.should be_false
   end
   
   it "knows it's the last song on a set" do
-    @song.is_last_on_set
-    @song.is_last_on_set?.should be_true
+    @song.last_on_set!
+    @song.last_on_set?.should be_true
   end
   
 end

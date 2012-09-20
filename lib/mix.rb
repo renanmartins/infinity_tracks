@@ -12,7 +12,9 @@ class Mix
   end
   
   def save
-    @songs.each {|song| song.save @name}
+    directory = Sanitizer.sanitize @name
+    Dir.mkdir(Dir.pwd + "/#{directory}/") unless Dir.exists?(Dir.pwd + "/#{directory}/")
+    @songs.each {|song| song.save directory}
   end
   
 end

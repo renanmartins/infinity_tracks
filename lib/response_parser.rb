@@ -19,7 +19,7 @@ class ResponseParser
     set = JSON.parse(json)["set"]
     track = set["track"]
     song = Song.new track["name"], track["performer"], track["url"]
-    song.is_last_on_set if set["at_last_track"]
+    song.last_on_set! if set["at_last_track"]
     song
   end
   

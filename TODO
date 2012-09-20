@@ -7,3 +7,4 @@ set: http://8tracks.com/sebastienvachon89/pop-diva-s-remixed
 
  => create playlist file
  => Create logs for progress, hide the curl output
+ => remove sanitizer. it sucks.

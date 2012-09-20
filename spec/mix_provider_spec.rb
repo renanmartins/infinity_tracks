@@ -32,8 +32,8 @@ describe "mix provider" do
     
     @client.should_receive(:next).exactly(2).with(token_from_parser, mix_id_from_parser).and_return(song_from_client)
     @parser.should_receive(:song).with(song_from_client).and_return(a_song, last_song)
-    a_song.should_receive(:is_last_on_set?).and_return(false)
-    last_song.should_receive(:is_last_on_set?).and_return(true)
+    a_song.should_receive(:last_on_set?).and_return(false)
+    last_song.should_receive(:last_on_set?).and_return(true)
     
     mix = @mix_provider.mix(url)
     mix.songs.first.should eql a_song

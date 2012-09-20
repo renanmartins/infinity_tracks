@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe "mix" do
   before :each do
-    @mix_name = "mix do bolinha"
+    @mix_name = "mix_do_bolinha"
     @mix = Mix.new @mix_name
     
     @first_song = Song.new "We Found Love", "Rihanna", "naoconsegue.com"
@@ -16,11 +16,13 @@ describe "mix" do
     @mix.songs.size.should eql 2
   end
   
-  it "should save itself in a directory" do
-    @first_song.should_receive(:save).with(@mix_name)
-    @second_song.should_receive(:save).with(@mix_name)
+  it "saves itself in a directory" do
+    directory_name = @mix.name
+    @first_song.should_receive(:save).with(directory_name)
+    @second_song.should_receive(:save).with(directory_name)
     
     @mix.save
+    `rm -rf #{directory_name}`
   end
   
   it "has a url for a similar mix" do
@@ -28,4 +30,5 @@ describe "mix" do
     @mix.similar = a_similar_mix_url
     @mix.similar.should eql a_similar_mix_url
   end
+
 end

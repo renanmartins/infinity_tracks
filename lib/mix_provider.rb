@@ -16,7 +16,7 @@ class MixProvider
     while true
       song = @parser.song(@client.next play_token, mix_id)
       mix.add song
-      break if song.is_last_on_set?
+      break if song.last_on_set?
     end
     
     mix
