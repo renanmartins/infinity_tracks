@@ -25,6 +25,13 @@ describe "mix" do
     `rm -rf #{directory_name}`
   end
   
+  it "saves a playlist when saving itself" do
+    directory_name = @mix.name
+    
+    @mix.playlist.first.should eql @first_song.filename
+    @mix.playlist.last.should eql @second_song.filename
+  end
+  
   it "has a url for a similar mix" do
     a_similar_mix_url = "a_similar_mix_url"
     @mix.similar = a_similar_mix_url
