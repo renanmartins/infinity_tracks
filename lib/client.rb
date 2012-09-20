@@ -26,4 +26,8 @@ class Client
     `curl #{api_header} http://8tracks.com/sets/#{play_token}/next.json?mix_id=#{mix_id}`    
   end
   
+  def similar_mix play_token, mix_id
+    `curl #{api_header} http://8tracks.com/sets/#{play_token}/next_mix.json?mix_id=#{mix_id}`
+  end
+  
 end

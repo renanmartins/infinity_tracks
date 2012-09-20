@@ -1,5 +1,6 @@
 class Mix
   attr_reader :songs, :name
+  attr_accessor :similar
 
   def initialize name
     @name = name

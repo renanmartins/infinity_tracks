@@ -22,4 +22,10 @@ describe "mix" do
     
     @mix.save
   end
+  
+  it "has a url for a similar mix" do
+    a_similar_mix_url = "a_similar_mix_url"
+    @mix.similar = a_similar_mix_url
+    @mix.similar.should eql a_similar_mix_url
+  end
 end

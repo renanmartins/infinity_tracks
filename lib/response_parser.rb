@@ -23,4 +23,9 @@ class ResponseParser
     song
   end
   
+  def next_mix_url json
+    next_mix_path = JSON.parse(json)["next_mix"]["path"]
+    "http://8tracks.com" + next_mix_path
+  end
+  
 end

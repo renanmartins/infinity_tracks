@@ -19,6 +19,14 @@ describe "response_parser" do
   it "parses the mix name from an html" do
     @response_parser.mix_name(@html).should eql "Pop diva's remixed."    
   end
+  
+  it "parses the mix url from a next mix json" do
+    next_mix_json = File.open(File.dirname(__FILE__) + "/resources/next_mix.json").read
+    
+    expected_mix_url = "http://8tracks.com/mwamba/just-another-fool-for-choptsticks-and-covers-and-baselines-because-it-feels-good"
+    @response_parser.next_mix_url(next_mix_json).should eql expected_mix_url
+        
+  end
     
   it "parses the song out of a json" do
     play_json = File.open(File.dirname(__FILE__) + "/resources/play.json").read
