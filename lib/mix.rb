@@ -35,7 +35,7 @@ class Mix
     playlist.each {|song_name| playlist_file.puts(song_name)} 
     playlist_file.close
 
-    `curl #{@cover_url} >> #{directory}/#{name}.jpg`
+    `curl #{@cover_url} >> "#{directory}/#{Sanitizer.sanitize(name)}.jpg"`
   end
   
 end
