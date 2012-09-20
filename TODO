@@ -1,7 +1,5 @@
  => Save song meta-data (whatever way, even the json file would be fine for now) - search for TagLib
  => Save the MIX meta-data
- => Download similar mixes (saves the selected one plus X similar ones =))
- 
  => write a bookmarklet that opens a page with a list of songs and urls for the playlist the user is viewing (THIS IS GONNA BE AWESOME)
 
  => it's currently not working for songs hosted in soundcloud. The songs are provided through a service. We need to figure this out (lots of playlists are there). One example is: 8tracks.com/dopestephan/party-mashup-2 , and a service call would be: http://api.soundcloud.com/tracks/34418448/stream?client_id=3904229f42df3999df223f6ebf39a8fe
