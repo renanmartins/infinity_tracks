@@ -5,6 +5,5 @@
 soundcloud: http://api.soundcloud.com/tracks/34418448/stream?client_id=3904229f42df3999df223f6ebf39a8fe
 non soundcloud set: http://8tracks.com/sebastienvachon89/pop-diva-s-remixed
 
- => create playlist file
  => Create logs for progress, hide the curl output
  => remove sanitizer. it sucks.
