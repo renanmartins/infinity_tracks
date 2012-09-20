@@ -12,7 +12,7 @@ class Song
   def save mix_name
     directory = sanitize mix_name
     Dir.mkdir(Dir.pwd + "/#{directory}/") unless Dir.exists?(Dir.pwd + "/#{directory}/")
-    system("curl #{url} >> \"#{directory}/#{sanitize performer}_#{sanitize name}.#{extension}\"")
+    system("wget -O \"#{directory}/#{sanitize performer}_#{sanitize name}.mp3\" #{url}")
   end
   
   def info
@@ -28,10 +28,6 @@ class Song
   end
   
   private
-  
-  def extension
-    @url.split(".").last
-  end
   
   def sanitize string
     string.gsub(/[^a-zA-Z0-9_ ]+/, "")

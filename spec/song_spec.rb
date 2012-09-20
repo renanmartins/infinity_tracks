@@ -8,7 +8,7 @@ describe "song" do
   
   it "saves itself in a directory" do
     directory = "test_songs"
-    @song.should_receive("system").with("curl #{@song.url} >> \"#{directory}/#{@song.performer}_#{@song.name}.mp3\"")
+    @song.should_receive("system").with("wget -O \"#{directory}/#{@song.performer}_#{@song.name}.mp3\" #{@song.url}")
     @song.save directory
     `rm -r #{directory}`
   end
@@ -16,7 +16,7 @@ describe "song" do
   it "handles special characters on its name" do
     mix_name = "tes#t@_s!on'g`s"
     song = Song.new "Gangnam !'\\Style", "Ps#y", "moizesnaoconsegue.com/music.mp3"
-    song.should_receive("system").with("curl #{song.url} >> \"test_songs/Psy_Gangnam Style.mp3\"")
+    song.should_receive("system").with("wget -O \"test_songs/Psy_Gangnam Style.mp3\" #{song.url}")
     song.save mix_name
     `rm -r test_songs/`
   end
