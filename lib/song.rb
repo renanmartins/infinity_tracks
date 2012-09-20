@@ -26,7 +26,11 @@ class Song
   end
   
   def filename
-    "#{Sanitizer.sanitize performer}_#{Sanitizer.sanitize name}.mp3" 
+    "#{Sanitizer.sanitize performer}_#{Sanitizer.sanitize name}.#{extension}" 
+  end
+  
+  def extension
+    @url.split(".").last == "m4a" ? "m4a" : "mp3"
   end
   
 end
