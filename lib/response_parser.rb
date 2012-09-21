@@ -33,4 +33,10 @@ class ResponseParser
     "http://8tracks.com" + next_mix_path
   end
   
+  def popular_playlists json
+    mixes = JSON.parse(json)["mixes"]
+    
+    mixes.collect {|m| "http://8tracks.com" + m["path"]}
+  end
+  
 end

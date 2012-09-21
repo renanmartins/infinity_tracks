@@ -33,5 +33,11 @@ describe 'client' do
     @client.should_receive(:`).with("curl -s #{@client.api_header} http://8tracks.com/sets/#{play_token}/next_mix.json?mix_id=#{mix_id}")
     @client.similar_mix play_token, mix_id
   end
+  
+  it "gets the most popular playlists" do
+    number_of_mixes = 3
+    @client.should_receive(:`).with("curl -s #{@client.api_header} \"http://8tracks.com/mixes.json?sort=popular&per_page=#{number_of_mixes}\"")
+    @client.popular_playlists number_of_mixes
+  end
 
 end

@@ -1,0 +1,134 @@
+{
+    "id": 2673644,
+    "path": "/mix_sets/2673644",
+    "restful_url": "http://8tracks.com/mix_sets/2673644",
+    "total_entries": 521054,
+    "page": 1,
+    "per_page": 3,
+    "next_page": 2,
+    "previous_page": null,
+    "total_pages": 173685,
+    "canonical_path": "/mixes/all/popular?per_page=3",
+    "name": "All mixes",
+    "mixes": [{
+        "id": 957462,
+        "name": "You actually need to party/run to this. ",
+        "published": true,
+        "description": "Being classy is overrated, just dance.  11 tracks. ",
+        "plays_count": 172087,
+        "likes_count": 14389,
+        "slug": "you-actually-need-to-party-run-to-this",
+        "path": "/brookeantonio/you-actually-need-to-party-run-to-this",
+        "cover_urls": {
+            "sq56": "http://imgix.8tracks.com/mix_covers/000/957/462/8238.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=56&h=56&fit=crop",
+            "sq100": "http://imgix.8tracks.com/mix_covers/000/957/462/8238.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=100&h=100&fit=crop",
+            "sq133": "http://imgix.8tracks.com/mix_covers/000/957/462/8238.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=133&h=133&fit=crop",
+            "max133w": "http://imgix.8tracks.com/mix_covers/000/957/462/8238.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=133&fit=max",
+            "max200": "http://imgix.8tracks.com/mix_covers/000/957/462/8238.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=200&h=200&fit=max",
+            "sq250": "http://imgix.8tracks.com/mix_covers/000/957/462/8238.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=250&h=250&fit=crop",
+            "sq500": "http://imgix.8tracks.com/mix_covers/000/957/462/8238.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=500&h=500&fit=crop",
+            "max1024": "http://imgix.8tracks.com/mix_covers/000/957/462/8238.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=1024&h=1024&fit=max",
+            "original": "http://imgix.8tracks.com/mix_covers/000/957/462/8238.original.jpg?fm=jpg&q=65&sharp=15&vib=10&"
+        },
+        "restful_url": "http://8tracks.com/mixes/957462",
+        "tag_list_cache": "dubstep, party, electronic, liquor, drugz",
+        "first_published_at": "2012-08-17T00:20:42Z",
+        "liked_by_current_user": false,
+        "nsfw": false,
+        "user": {
+            "id": 447239,
+            "login": "brookeantonio",
+            "slug": "brookeantonio",
+            "avatar_urls": {
+                "sq56": "http://cf3.8tracks.us/avatars/000/447/239/60160.sq56.jpg",
+                "sq72": "http://cf3.8tracks.us/avatars/000/447/239/60160.sq72.jpg",
+                "sq100": "http://cf3.8tracks.us/avatars/000/447/239/60160.sq100.jpg",
+                "max200": "http://cf3.8tracks.us/avatars/000/447/239/60160.max200.jpg",
+                "max250w": "http://cf3.8tracks.us/avatars/000/447/239/60160.max250w.jpg"
+            },
+            "followed_by_current_user": false
+        }
+    }, {
+        "id": 847804,
+        "name": "Shit That's Been Fueling My Parties",
+        "published": true,
+        "description": "64 Songs, Over 3 hours worth of music that will keep you fueled all night. Massive playlist of most of my favorite drinking songs, mash-ups, and remixes.\n\nSide note - Just realized I accidently put a few songs twice. Sorry about that!\n\nSince alot of people have been asking - All of the songs can be found on youtube or soundcloud. - I used a youtube converter add-on to download them\n\n\n",
+        "plays_count": 188554,
+        "likes_count": 23014,
+        "slug": "shit-that-s-been-fueling-my-parties",
+        "path": "/colorfulducttape/shit-that-s-been-fueling-my-parties",
+        "cover_urls": {
+            "sq56": "http://imgix.8tracks.com/mix_covers/000/847/804/64550.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=56&h=56&fit=crop",
+            "sq100": "http://imgix.8tracks.com/mix_covers/000/847/804/64550.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=100&h=100&fit=crop",
+            "sq133": "http://imgix.8tracks.com/mix_covers/000/847/804/64550.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=133&h=133&fit=crop",
+            "max133w": "http://imgix.8tracks.com/mix_covers/000/847/804/64550.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=133&fit=max",
+            "max200": "http://imgix.8tracks.com/mix_covers/000/847/804/64550.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=200&h=200&fit=max",
+            "sq250": "http://imgix.8tracks.com/mix_covers/000/847/804/64550.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=250&h=250&fit=crop",
+            "sq500": "http://imgix.8tracks.com/mix_covers/000/847/804/64550.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=500&h=500&fit=crop",
+            "max1024": "http://imgix.8tracks.com/mix_covers/000/847/804/64550.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=1024&h=1024&fit=max",
+            "original": "http://imgix.8tracks.com/mix_covers/000/847/804/64550.original.jpg?fm=jpg&q=65&sharp=15&vib=10&"
+        },
+        "restful_url": "http://8tracks.com/mixes/847804",
+        "tag_list_cache": "mashup, party, remix",
+        "first_published_at": "2012-06-18T17:24:57Z",
+        "liked_by_current_user": false,
+        "nsfw": false,
+        "user": {
+            "id": 610598,
+            "login": "ColorfulDuctTape",
+            "slug": "colorfulducttape",
+            "avatar_urls": {
+                "sq56": "http://cf2.8tracks.us/avatars/000/610/598/41039.sq56.jpg",
+                "sq72": "http://cf2.8tracks.us/avatars/000/610/598/41039.sq72.jpg",
+                "sq100": "http://cf2.8tracks.us/avatars/000/610/598/41039.sq100.jpg",
+                "max200": "http://cf2.8tracks.us/avatars/000/610/598/41039.max200.jpg",
+                "max250w": "http://cf2.8tracks.us/avatars/000/610/598/41039.max250w.jpg"
+            },
+            "followed_by_current_user": false
+        }
+    }, {
+        "id": 957240,
+        "name": "the lucky ones",
+        "published": true,
+        "description": "some of my favorite songs. this is my first mix of many to come. artists include mumford and sons, the xx, bon iver, etc. thanks for listening, enjoy!",
+        "plays_count": 110708,
+        "likes_count": 13846,
+        "slug": "the-lucky-ones-1",
+        "path": "/valeriaj94/the-lucky-ones-1",
+        "cover_urls": {
+            "sq56": "http://imgix.8tracks.com/mix_covers/000/957/240/31887.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=56&h=56&fit=crop",
+            "sq100": "http://imgix.8tracks.com/mix_covers/000/957/240/31887.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=100&h=100&fit=crop",
+            "sq133": "http://imgix.8tracks.com/mix_covers/000/957/240/31887.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=133&h=133&fit=crop",
+            "max133w": "http://imgix.8tracks.com/mix_covers/000/957/240/31887.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=133&fit=max",
+            "max200": "http://imgix.8tracks.com/mix_covers/000/957/240/31887.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=200&h=200&fit=max",
+            "sq250": "http://imgix.8tracks.com/mix_covers/000/957/240/31887.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=250&h=250&fit=crop",
+            "sq500": "http://imgix.8tracks.com/mix_covers/000/957/240/31887.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=500&h=500&fit=crop",
+            "max1024": "http://imgix.8tracks.com/mix_covers/000/957/240/31887.original.jpg?fm=jpg&q=65&sharp=15&vib=10&w=1024&h=1024&fit=max",
+            "original": "http://imgix.8tracks.com/mix_covers/000/957/240/31887.original.jpg?fm=jpg&q=65&sharp=15&vib=10&"
+        },
+        "restful_url": "http://8tracks.com/mixes/957240",
+        "tag_list_cache": "alternative rock, indie rock, indie pop, love, rock",
+        "first_published_at": "2012-08-17T01:09:24Z",
+        "liked_by_current_user": false,
+        "nsfw": false,
+        "user": {
+            "id": 2086800,
+            "login": "ValeriaJ94",
+            "slug": "valeriaj94",
+            "avatar_urls": {
+                "sq56": "http://cf0.8tracks.us/avatars/002/086/800/13194.sq56.jpg",
+                "sq72": "http://cf0.8tracks.us/avatars/002/086/800/13194.sq72.jpg",
+                "sq100": "http://cf0.8tracks.us/avatars/002/086/800/13194.sq100.jpg",
+                "max200": "http://cf0.8tracks.us/avatars/002/086/800/13194.max200.jpg",
+                "max250w": "http://cf0.8tracks.us/avatars/002/086/800/13194.max250w.jpg"
+            },
+            "followed_by_current_user": false
+        }
+    }],
+    "status": "200 OK",
+    "errors": null,
+    "notices": null,
+    "logged_in": false,
+    "api_warning": ["You didn't pass an API version, defaulting to api_version=2."],
+    "api_version": 2
+}

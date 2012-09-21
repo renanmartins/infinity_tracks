@@ -60,4 +60,10 @@ describe "response_parser" do
     song.last_on_set?.should be_true
     song.metadata.should eql metadata
   end  
+  
+  it "parses the popular mixes urls from a json" do
+    json = File.open(File.dirname(__FILE__) + "/resources/popular_playlists.json").read
+    popular_playlists = ["http://8tracks.com/brookeantonio/you-actually-need-to-party-run-to-this", "http://8tracks.com/colorfulducttape/shit-that-s-been-fueling-my-parties", "http://8tracks.com/valeriaj94/the-lucky-ones-1"]
+    @response_parser.popular_playlists(json).should eql popular_playlists
+  end
 end

@@ -1,6 +1,6 @@
 class Client
   
-  attr_reader :play_token
+  attr_reader :play_token, :api_key
   
   def initialize
     @api_key = "e098e014125339698e741cb25feebd9f54b1a89b"
@@ -24,6 +24,10 @@ class Client
   
   def similar_mix play_token, mix_id
     `curl -s #{api_header} http://8tracks.com/sets/#{play_token}/next_mix.json?mix_id=#{mix_id}`
+  end
+  
+  def popular_playlists number_of_playlists
+    `curl -s #{api_header} \"http://8tracks.com/mixes.json?sort=popular&per_page=#{number_of_playlists}\"`
   end
   
 end
