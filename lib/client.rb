@@ -11,19 +11,19 @@ class Client
   end
   
   def play_token
-    `curl #{api_header} http://8tracks.com/sets/new.json`
+    `curl -s #{api_header} http://8tracks.com/sets/new.json`
   end
   
   def playlist url
-   `curl #{url}`  
+   `curl -s #{url}`  
   end
   
   def next play_token, mix_id
-    `curl #{api_header} http://8tracks.com/sets/#{play_token}/next.json?mix_id=#{mix_id}`    
+    `curl -s #{api_header} http://8tracks.com/sets/#{play_token}/next.json?mix_id=#{mix_id}`    
   end
   
   def similar_mix play_token, mix_id
-    `curl #{api_header} http://8tracks.com/sets/#{play_token}/next_mix.json?mix_id=#{mix_id}`
+    `curl -s #{api_header} http://8tracks.com/sets/#{play_token}/next_mix.json?mix_id=#{mix_id}`
   end
   
 end

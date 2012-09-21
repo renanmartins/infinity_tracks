@@ -9,20 +9,20 @@ describe "song" do
   it "saves itself as mp3 in a directory" do
     directory = "test_songs"
     a_song = Song.new "Friday", "Rebeca Black", "www.address.com/urlloucadosoundloud/stream.?sadfgsvbsvsfnbhvjhfuyfuyf"
-    a_song.should_receive("system").with("wget -O \"#{directory}/#{a_song.performer}_#{a_song.name}.mp3\" #{a_song.url}")
+    a_song.should_receive("system").with("wget -q -O \"#{directory}/#{a_song.performer}_#{a_song.name}.mp3\" #{a_song.url}")
     a_song.save directory
   end
   
   it "saves itself as m4a in a directory" do
     directory = "test_songs"
-    @song.should_receive("system").with("wget -O \"#{directory}/#{@song.performer}_#{@song.name}.m4a\" #{@song.url}")
+    @song.should_receive("system").with("wget -q -O \"#{directory}/#{@song.performer}_#{@song.name}.m4a\" #{@song.url}")
     @song.save directory
   end
   
   it "handles special characters on its name" do
     directory = "test_songs"
     song = Song.new "Gangnam !'\\Style", "Ps#y", "moizesnaoconsegue.com/music.m4a"
-    song.should_receive("system").with("wget -O \"#{directory}/Psy_Gangnam Style.m4a\" #{song.url}")
+    song.should_receive("system").with("wget -q -O \"#{directory}/Psy_Gangnam Style.m4a\" #{song.url}")
     song.save directory
   end
   

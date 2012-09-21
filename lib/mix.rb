@@ -16,6 +16,7 @@ class Mix
     directory = Sanitizer.sanitize @name
     create_directory_if_needed directory
     save_playlist directory
+    puts "\nSaving songs"
     @songs.each {|song| song.save directory}
   end
   
@@ -36,7 +37,7 @@ class Mix
     playlist.each {|song_name| playlist_file.puts(song_name)} 
     playlist_file.close
 
-    `curl #{@cover_url} >> "#{directory}/#{Sanitizer.sanitize(name)}.jpg"`
+    `wget -q -O "#{directory}/#{Sanitizer.sanitize(name)}.jpg" #{@cover_url}`
   end
   
 end

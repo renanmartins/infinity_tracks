@@ -1,4 +1,6 @@
 resources/*
 *.mp3
 *.m4a
+*.jpg
+*.m3u
 songs/*

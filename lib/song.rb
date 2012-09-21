@@ -10,7 +10,9 @@ class Song
   end
   
   def save directory
-    system("wget -O \"#{directory}/#{filename}\" #{url}")
+    print "#{performer} - #{name}"
+    system("wget -q -O \"#{directory}/#{filename}\" #{url}")
+    puts " - done!"
   end
   
   def info

@@ -13,6 +13,7 @@ number_of_mixes_to_download.to_i.times do
   mixes << mix
   next_mix_url = mix.similar
   if mixes.find {|m| m.url == next_mix_url}.nil?
+    puts ""
     mix = mix_provider.mix(next_mix_url)
     mix.save
   end
