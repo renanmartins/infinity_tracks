@@ -4,15 +4,13 @@ describe "song" do
   
   before :each do
     @song = Song.new "Friday", "Rebeca Black", "www.address.com/ab25sa.m4a"
-    @song.stub!(:print)
-    @song.stub!(:puts)
+    Song.any_instance.stub(:puts)
+    Song.any_instance.stub(:print)
   end
   
   it "saves itself as mp3 in a directory" do
     directory = "test_songs"
     a_song = Song.new "Friday", "Rebeca Black", "www.address.com/urlloucadosoundloud/stream.?sadfgsvbsvsfnbhvjhfuyfuyf"
-    a_song.stub!(:print)
-    a_song.stub!(:puts)
     a_song.should_receive("system").with("wget -q -O \"#{directory}/#{a_song.performer}_#{a_song.name}.mp3\" #{a_song.url}")
     a_song.save directory
   end
@@ -26,8 +24,6 @@ describe "song" do
   it "handles special characters on its name" do
     directory = "test_songs"
     song = Song.new "Gangnam !'\\Style", "Ps#y", "moizesnaoconsegue.com/music.m4a"
-    song.stub!(:print)
-    song.stub!(:puts)
     song.should_receive("system").with("wget -q -O \"#{directory}/Psy_Gangnam Style.m4a\" #{song.url}")
     song.save directory
   end

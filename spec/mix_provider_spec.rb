@@ -7,8 +7,8 @@ describe "mix provider" do
     @parser = double("response_parser")
     
     @mix_provider = MixProvider.new @client, @parser
-    @mix_provider.stub!(:print)
-    @mix_provider.stub!(:puts)
+    MixProvider.any_instance.stub(:print)
+    MixProvider.any_instance.stub(:puts)
   end
   
   it "delegates properly" do
