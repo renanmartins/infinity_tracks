@@ -1,3 +1,16 @@
+ => Sometimes the API gets into a loop when looking for similar mixes. 
+ 	EXAMPLE:
+ 	
+	 	http://8tracks.com/lilianyc/driving-in-georgia leads to
+	 	http://8tracks.com/spncr/indie-of-the-present-and-future and the NEXT will return 
+	 	http://8tracks.com/spncr/indie-of-the-present-and-future again.
+
+
+	 	http://8tracks.com/jayleb/what-badass-sounds-like leads to
+	 	ttp://8tracks.com/deadhead/dirt-dust-and-rust which will lead again to 
+	 	http://8tracks.com/jayleb/what-badass-sounds-like
+
+
  => Save song meta-data (whatever way, even the json file would be fine for now) - search for TagLib
  => Save the MIX meta-data
  => write a bookmarklet that opens a page with a list of songs and urls for the playlist the user is viewing (THIS IS GONNA BE AWESOME)
