@@ -7,4 +7,5 @@ non soundcloud set: http://8tracks.com/sebastienvachon89/pop-diva-s-remixed
 loop similar: http://8tracks.com/jayleb/what-badass-sounds-like -> http://8tracks.com/deadhead/dirt-dust-and-rust
 
  => Create logs for progress, hide the curl output
+ => get trending mixes paginated
  => remove sanitizer. it sucks.
