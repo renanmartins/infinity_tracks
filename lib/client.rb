@@ -27,7 +27,15 @@ class Client
   end
   
   def popular_playlists number_of_playlists
-    `curl -s #{api_header} \"http://8tracks.com/mixes.json?sort=popular&per_page=#{number_of_playlists}\"`
+    playlists "popular", number_of_playlists
   end
   
+  def hot_playlists number_of_playlists
+    playlists "hot", number_of_playlists
+  end
+
+  def playlists type, number_of_playlists
+    `curl -s #{api_header} \"http://8tracks.com/mixes.json?sort=#{type}&per_page=#{number_of_playlists}\"`
+  end
+
 end

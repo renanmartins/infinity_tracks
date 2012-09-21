@@ -40,4 +40,9 @@ describe 'client' do
     @client.popular_playlists number_of_mixes
   end
 
+  it "gets the hottest playlists" do
+    number_of_mixes = 3
+    @client.should_receive(:`).with("curl -s #{@client.api_header} \"http://8tracks.com/mixes.json?sort=hot&per_page=#{number_of_mixes}\"")
+    @client.hot_playlists number_of_mixes
+  end
 end
