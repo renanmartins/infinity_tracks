@@ -1,9 +1,10 @@
 class Mix
-  attr_reader :songs, :name
+  attr_reader :songs, :name, :url
   attr_accessor :similar, :cover_url
 
-  def initialize name
+  def initialize name, url
     @name = name
+    @url = url
     @songs = []
   end
 

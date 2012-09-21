@@ -10,7 +10,7 @@ class MixProvider
     playlist = @client.playlist url
     mix_id = @parser.mix_id(playlist)
   
-    mix = Mix.new @parser.mix_name(playlist)
+    mix = Mix.new @parser.mix_name(playlist), url
     mix.similar = @parser.next_mix_url(@client.similar_mix play_token, mix_id)
     mix.cover_url = @parser.mix_cover_url(playlist)
     

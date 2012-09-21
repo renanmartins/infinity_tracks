@@ -3,7 +3,8 @@ require "spec_helper"
 describe "mix" do
   before :each do
     @mix_name = "mix_do_bolinha"
-    @mix = Mix.new @mix_name
+    @url = "8tracks.com/mixdobolinha"
+    @mix = Mix.new @mix_name, @url
     
     @first_song = Song.new "We Found Love", "Rihanna", "naoconsegue.com"
     @second_song = Song.new "We Didnt Find Love", "Rihanna", "moises.com"
@@ -37,6 +38,10 @@ describe "mix" do
     a_similar_mix_url = "a_similar_mix_url"
     @mix.similar = a_similar_mix_url
     @mix.similar.should eql a_similar_mix_url
+  end
+  
+  it "has its url" do
+    @mix.url.should eql @url
   end
 
 end
