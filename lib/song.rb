@@ -1,6 +1,7 @@
 class Song
   
   attr_reader :name, :performer, :url
+  attr_accessor :metadata
   
   def initialize(name, performer, url)
     @name = name

@@ -5,6 +5,7 @@ describe "mix" do
     @mix_name = "mix_do_bolinha"
     @url = "8tracks.com/mixdobolinha"
     @mix = Mix.new @mix_name, @url
+    @mix.stub!(:puts)
     
     @first_song = Song.new "We Found Love", "Rihanna", "naoconsegue.com"
     @second_song = Song.new "We Didnt Find Love", "Rihanna", "moises.com"

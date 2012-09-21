@@ -33,6 +33,20 @@ describe "response_parser" do
     
   it "parses the song out of a json" do
     play_json = File.open(File.dirname(__FILE__) + "/resources/play.json").read
+    metadata = JSON.parse('{
+        "id": 9378697,
+        "name": "Pennies from Heaven",
+        "performer": "Louis Prima",
+        "release_name": "Capitol Collectors Series: Louis Prima",
+        "year": 1991,
+        "url": "http://cft.8tracks.com/tf/035/117/082/mvUG6M.48k.v3.m4a",
+        "faved_by_current_user": false,
+        "buy_link": "http://click.linksynergy.com/fs-bin/stat?id=1Cx7A22HMKA&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=http%253A%252F%252Fax.search.itunes.apple.com%252FWebObjects%252FMZSearch.woa%252Fwa%252FadvancedSearch%253FallArtistNames%253DLouis%252BPrima%2526completeTitle%253DPennies%252520from%252520Heaven%2526media%253Dmusic",
+        "buy_icon": "http://8tracks.com/assets/buy/itunes.png",
+        "you_tube_id": null,
+        "you_tube_status": "ok",
+        "play_duration": 0
+      }')
     
     expected_song_url = "http://cft.8tracks.com/tf/035/117/082/mvUG6M.48k.v3.m4a"
     expected_song_name = "Pennies from Heaven"
@@ -44,5 +58,6 @@ describe "response_parser" do
     song.name.should eql expected_song_name
     song.performer.should eql expected_song_performer
     song.last_on_set?.should be_true
+    song.metadata.should eql metadata
   end  
 end
